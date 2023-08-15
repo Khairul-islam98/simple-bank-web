@@ -9,6 +9,12 @@ document.getElementById('btn-withdraw').addEventListener('click', function(){
         alert('Please provide a valid number')
         return;
     }
+
+    if(newWithdrawAmount <= 0){
+        alert('Please provide a valid amount for deposit.');
+        return;
+    }
+
     const withdrawTotalElement = document.getElementById('withdraw-total');
     const previousWithdrawTotalString = withdrawTotalElement.innerText;
     const previousWithdrawTotal = parseFloat(previousWithdrawTotalString);
